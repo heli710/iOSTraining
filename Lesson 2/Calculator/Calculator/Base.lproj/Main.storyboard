@@ -241,6 +241,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="acBtn" destination="OL6-s4-KW5" id="fBj-wo-Mfc"/>
                         <outlet property="addBtn" destination="UkH-Iz-bHo" id="0RA-oL-wx4"/>
                         <outlet property="divideBtn" destination="Sr2-4P-zGw" id="wnv-bQ-cmC"/>
                         <outlet property="eightBtn" destination="Kl7-3Z-GyE" id="f4k-9l-qQE"/>
