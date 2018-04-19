@@ -25,9 +25,7 @@ func optional () {
     guard let str = myStr else {return}
     print("unwarpping string usinh guard let " + str)
     
-    // use ! & ?
-    
-    print(myStr) // if myStr is not nil, it will print: Optional("Hello")
+
     print("force unwrapping string" + myStr!) //force uwrapping, ensure myStr is not nill if less it will crash
     
 }
@@ -100,7 +98,7 @@ sayHello("John")
 
 
 
-//========================= Enum =============================
+//========================= Enum ================================
 enum Position {
     case manager
     case staff
@@ -114,7 +112,25 @@ case .staff:
     print("Staff")
 }
 
-// ================== Inheritance in swift ======================
+
+// Nesting enum
+
+enum Education {
+    
+    case University
+    
+    enum School {
+        case Primary
+        case Secondary
+        case HighSchool
+    }
+}
+
+let student1 = Education.School.Primary
+let student2 = Education.University
+
+
+// ================== Inheritance in swift ========================
 
 class ParentClass {
     func doSomething() {
@@ -130,6 +146,9 @@ class ChildClass: ParentClass  {
         // ....
     }
 }
+
+let subClass = ChildClass()
+subClass.doSomething()
 // ==================== Extension ===================
 
 extension ParentClass {
@@ -142,20 +161,25 @@ let myClass = ParentClass()
 myClass.sayHello()
 
 // ================= Protocol ========================
-
+print("\n---------Protocol --------------")
 protocol Run {
-    func legs()
+    func run()
 }
 
 class Dog: Run {
-    func legs() {
+    func run() {
         print("Dogs run by four legs")
     }
 }
 
 class Duck: Run {
-    func legs() {
+    func run() {
         print("Ducks run by two legs")
     }
     
 }
+
+let dog = Dog()
+dog.run()
+let duck = Duck()
+duck.run()
